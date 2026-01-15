@@ -74,21 +74,22 @@
 }
 
 @mixin button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+
+  height: 56px;
+  padding: 0 48px;
+
   border: 0;
   border-radius: 8px;
-  height: 56px;
+
   font-size: 16px;
   font-weight: 700;
-  line-height: 27px;
-  text-align: center;
+  line-height: 1;
+
   color: $white-text-color;
   background-color: $button-background-color;
-
-
 
 
   @include hover(background-color, $main-text-color);
