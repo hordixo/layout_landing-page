@@ -19,6 +19,8 @@
     &-button {
       @include button;
 
+      grid-column: 1 / -1;
+
       cursor: pointer;
 
       @include on-desctop{
@@ -66,7 +68,7 @@
     font-style: bold;
     font-size: 18px;
     line-height: 140%;
-    grid-column: 1 / -1;
+
 
     @include on-tablet {
       font-size: 24px;
