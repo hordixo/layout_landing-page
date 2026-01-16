@@ -73,7 +73,37 @@
   }
 }
 
-@mixin button {
+// @mixin button {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   height: 56px;
+//   padding: 0 48px;
+
+//   border: 0;
+//   border-radius: 8px;
+
+//   font-size: 16px;
+//   font-weight: 700;
+//   line-height: 1;
+
+//   color: $white-text-color;
+//   background-color: $button-background-color;
+
+
+//   @include hover(background-color, $main-text-color);
+//   @include pressed(background-color, $button-pressed-color);
+//   @include pressed(transform, scale(1.05));
+// }
+
+
+@mixin button(
+  $bg-color,
+  $hover-bg-color,
+  $pressed-bg-color,
+  $pressed-transform: null
+) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -89,12 +119,14 @@
   line-height: 1;
 
   color: $white-text-color;
-  background-color: $button-background-color;
+  background-color: $bg-color;
 
+  @include hover(background-color, $hover-bg-color);
+  @include pressed(background-color, $pressed-bg-color);
 
-  @include hover(background-color, $main-text-color);
-  @include pressed(background-color, $button-pressed-color);
-  @include pressed(transform, scale(1.05));
+  @if $pressed-transform != null {
+    @include pressed(transform, $pressed-transform);
+  }
 }
 
 

@@ -17,11 +17,16 @@
     @include page-grid;
 
     &-button {
-      @include button;
+      @include button(
+        $button-background-color,
+        $main-text-color,
+        $button-pressed-color,
+      );
 
       grid-column: 1 / -1;
 
       cursor: pointer;
+
 
       @include on-desctop{
         grid-column: span 4;

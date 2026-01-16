@@ -81,14 +81,14 @@
     }
 
     &--button {
-      @include button;
-      
+      @include button(
+        $main-text-color,
+        $button-background-color,
+        $button-pressed-color
+      );
+
       grid-column: 1 / -1;
-
-      background-color: $main-text-color;
-
       cursor: pointer;
-
     }
   }
 
