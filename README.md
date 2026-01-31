@@ -13,7 +13,7 @@ The goal of this project is to practice HTML, SCSS, and responsive layout skills
 - Responsive layout (Flexbox/Grid)
 
 ## 🚀 Demo
-[Live Demo](https://<your_account>.github.io/layout_landing-page/)
+[Live Demo](https://hordixo.github.io/layout_landing-page/)
 
 ## ✅ Features
 - Responsive design
